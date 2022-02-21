@@ -10,10 +10,13 @@ from time import sleep
 
 led17 = LED(17)
 led27 = LED(27)
-melody = buzzer_helpers.star_wars_melody
-#tempo = buzzer_helpers.tempo
-tempo = buzzer_helpers.star_wars_tempo
-time = buzzer_helpers.time.sleep(2)
+
+melody_ul = buzzer_helpers.star_wars_melody
+melody_ur = buzzer_helpers.final_countdown_melody
+
+tempo_ul = buzzer_helpers.star_wars_tempo
+tempo_ur = buzzer_helpers.final_countdown_tempo
+#time = buzzer_helpers.time.sleep(2)
 #play_super = buzzer_helpers.play(melody, tempo, 1.3, 0.800)
 #play_sw = buzzer_helpers.play(melody, tempo, 0.5, 1.0)
 #destroy_here = buzzer_helpers.destroy()
@@ -33,13 +36,14 @@ def upl():
         bd.color = "green"
         buzzer_helpers.setup()
         print("Upper Left Button - Star Wars Imprerial March")
-        buzzer_helpers.play(melody, tempo, 0.5, 1.0)
+        buzzer_helpers.play(melody_ul, tempo_ul, 0.5, 1.0)
 
 def upr():
         bd.color = "green"
         buzzer_helpers.setup()
-        print("Upper Right Button - Super Mario Theme")
-        buzzer_helpers.play(melody, tempo, 1.3, 0.800)
+        #print("Upper Right Button - Super Mario Theme")
+        print("Upper Right Button - Final Countdown Theme")
+        buzzer_helpers.play(melody_ur, tempo_ur, 0.3, 0.800)
 
 def left():
         bd.color = "green"
