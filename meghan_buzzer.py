@@ -7,16 +7,21 @@ from signal import pause
 from gpiozero import LED
 from time import sleep
 
-print("Brooks, start up your Pinewood Derby Engines!!!")
+print("Meghan, start up your Pinewood Derby Engines!!!")
 
 led17 = LED(17)
 led27 = LED(27)
 
 melody_ul = buzzer_helpers.star_wars_melody
-melody_ur = buzzer_helpers.final_countdown_melody
-
 tempo_ul = buzzer_helpers.star_wars_tempo
-tempo_ur = buzzer_helpers.final_countdown_tempo
+
+melody_ur = buzzer_helpers.cat_melody
+tempo_ur = buzzer_helpers.cat_tempo
+
+
+
+#buzzer_helpers.play(melody_ur, tempo_ur, 0.1, 1.5)
+
 
 def up():
 	bd.color = "green"
@@ -38,9 +43,8 @@ def upl():
 def upr():
         bd.color = "green"
         buzzer_helpers.setup()
-        #print("Upper Right Button - Super Mario Theme")
-        print("Upper Right Button - Final Countdown Theme")
-        buzzer_helpers.play(melody_ur, tempo_ur, 0.3, 0.800)
+        print("Upper Right Button - Cat Meow Theme")
+        buzzer_helpers.play(melody_ur, tempo_ur, 0.1, 1.5)
 
 def left():
         bd.color = "green"

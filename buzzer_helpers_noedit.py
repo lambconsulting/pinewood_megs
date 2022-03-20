@@ -533,19 +533,6 @@ final_countdown_tempo = [
 	2,8,4,16,16,
 	1,
 ]
-cat_melody = [
-	notes['C4'],notes['B3'],notes['A3'],notes['G3'],
-	notes['C4'],notes['B3'],notes['A3'],notes['G3'],
-	notes['C4'],notes['B3'],notes['C4'],notes['CS4'],
-	notes['D4'],notes['B3'],notes['A3'],notes['G3'],
-]
-
-cat_tempo = [
-	4,4,4,4,
-	4,4,4,4,
-	4,4,4,4,
-	4,4,4,4,
-]
 
 def buzz(frequency, length):	 #create the function "buzz" and feed it the pitch and duration)
 
@@ -581,3 +568,52 @@ def play(melody,tempo,pause,pace=0.800):
 		buzz(melody[i],noteDuration)	# Change the frequency along the song note
 		
 		pauseBetweenNotes = noteDuration * pause
+		time.sleep(pauseBetweenNotes)
+	
+	
+'''
+if __name__ == '__main__':		# Program start from here
+	try:
+		setup()
+		print "The Final Countdown"
+		play(final_countdown_melody, final_countdown_tempo, 0.30, 1.2000)
+		time.sleep(2)
+		print "Per Olssons Bonnagard (Old MacDonald Had A Farm) Melody"
+		play(bonnagard_melody, bonnagard_tempo, 0.30, 0.800)
+		time.sleep(2)
+		print "Manaderna (Symphony No. 9) Melody"
+		play(manaderna_melody, manaderna_tempo, 0.30, 0.800)
+		time.sleep(2)
+		print "Deck The Halls Melody"
+		play(deck_the_halls_melody, deck_the_halls_tempo, 0.30, 0.800)
+		time.sleep(2)
+		print "Crazy Frog (Axel F) Theme"
+		play(crazy_frog_melody, crazy_frog_tempo, 0.30, 0.900)
+		time.sleep(2)
+		print "Twinkle, Twinkle, Little Star Melody"
+		play(twinkle_twinkle_melody, twinkle_twinkle_tempo, 0.50, 1.000)
+		time.sleep(2)
+		print "Popcorn Melody"
+		play(popcorn_melody, popcorn_tempo, 0.50, 1.000)
+		time.sleep(2)
+		print "Star Wars Theme"
+		play(star_wars_melody, star_wars_tempo, 0.50, 1.000)
+		time.sleep(2)
+'''
+#setup()
+#print "Super Mario Theme"
+#play(melody, tempo, 1.3, 0.800)
+#time.sleep(2)
+'''                
+		print "Super Mario Underworld Theme"
+		play(underworld_melody, underworld_tempo, 1.3, 0.800)
+		time.sleep(2)
+		print "Adventure Time Theme"
+		play(adventure_time_melody, adventure_time_tempo, 1.3, 1.500)
+		
+		destroy()
+	except KeyboardInterrupt:  	# When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+'''
+#destroy()
+
+
